@@ -1,0 +1,493 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0.5vw 0;
+  padding: 0;
+}
+
+.header {
+  padding: 0;
+}
+
+.header .first {
+  display: flex;
+}
+
+.header .first .logo {
+  width: 4%;
+  height: 4%;
+  margin-bottom: 0.5vw;
+  margin-left: 1vw;
+}
+
+.header .first .search {
+  height: 1.8vw;
+  display: flex;
+  margin-left: 15%;
+  padding-top: 0.5%;
+  padding-right: 0.5%;
+  padding-bottom: 0.25%;
+  border-bottom: 0.1vw solid #000000;
+}
+
+.header .first .search_box {
+  font-family: "Inter", sans-serif;
+  border: none;
+  width: 55vw;
+  font-size: 1.1vw;
+  color: #7c7c7c;
+  padding: 0 1vw;
+  margin-top: 0.3vw;
+}
+
+.header .first input {
+  margin-bottom: -1vw;
+}
+
+.header .first input:focus {
+  outline: none;
+  color: #7c7c7c;
+}
+
+.header .first .options {
+  height: 1.8vw;
+  display: flex;
+  margin-left: 12%;
+}
+
+.header .first .options i {
+  margin-right: 1.5vw;
+  margin-top: 19%;
+}
+
+.header .second {
+  background-color: #184e75;
+  padding: 1vw 5vw;
+  color: #ffffff;
+}
+
+.header .second a {
+  color: #ffffff;
+  text-decoration: None;
+  font-size: 0.9vw;
+  margin-right: 5vw;
+}
+
+.content {
+  padding: 0 5vw;
+}
+
+.content .title {
+  top: 7vw;
+  left: 5vw;
+  font-size: 2.7vw;
+  color: #000000;
+  font-weight: 650;
+}
+
+.content .info {
+  display: flex;
+}
+
+.content .info .personal {
+  display: flex;
+  width: 40%;
+}
+
+.content .info .personal .information {
+  width: 40%;
+}
+
+.content .info .personal .information .dichvu {
+  margin-top: -1.1vw;
+  display: flex;
+}
+
+.content .info .personal .information .dichvu .dichvuyte {
+  margin-left: 0.4vw;
+  font-weight: 350;
+  font-size: 1.1vw;
+}
+
+.content .info .personal .information .name {
+  margin-top: -1.1vw;
+  display: flex;
+}
+
+.content .info .personal .information .name .ten {
+  margin-left: 0.4vw;
+  font-weight: 350;
+  font-size: 1.1vw;
+}
+
+.content .info .personal .information .code {
+  margin-top: -1.1vw;
+  display: flex;
+}
+
+.content .info .personal .information .code .max {
+  margin-left: 0.4vw;
+  font-weight: 350;
+  font-size: 1.1vw;
+}
+
+.content .info .personal img {
+  margin-left: 5vw;
+  width: 25%;
+  height: 92%;
+}
+
+.content .info .orga {
+  margin-left: 5vw;
+  text-align: center;
+  width: 50%;
+}
+
+.content .info .orga .nameorga {
+  font-weight: 700;
+  font-size: 3vw;
+  margin-left: 5%;
+  color: #004e75;
+  margin-right: 5%;
+  margin-top: -1vw;
+}
+
+.content .info .orga .time {
+  font-size: 1.3vw;
+  color: #004e75;
+  font-weight: 600;
+  margin-top: -2.2vw;
+  margin-left: 0.4vw;
+}
+
+.content .info .orga .namedct {
+  font-size: 1.3vw;
+  color: #004e75;
+  font-weight: 600;
+  margin-top: -0.8vw;
+  margin-left: 0.4vw;
+}
+
+.content .info .orga .aidurst {
+  font-size: 1.3vw;
+  color: #004e75;
+  font-weight: 600;
+  margin-top: -0.8vw;
+  margin-left: 0.4vw;
+}
+
+.content .first {
+  display: flex;
+}
+
+.content .first .first_section .note {
+  width: 45vw;
+  margin-top: 1vw;
+  padding: 0.5vw 2vw;
+  border: 0.1vw solid #004e75;
+  height: 88%;
+}
+
+.content .first .first_section .title_note {
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: #616161;
+  margin-top: 2.5vw;
+}
+
+.content .first .first_section .note .text .copd {
+  display: flex;
+}
+
+.content .first .first_section .note .text .copd .bold {
+  font-size: 1.15vw;
+  color: #000000;
+  font-weight: 700;
+}
+
+.content .first .first_section .note .text .copd .data {
+  font-size: 1.15vw;
+  color: #000000;
+  font-weight: 350;
+  margin-left: 0.5vw;
+}
+
+.content .first .first_section .note .text .covid {
+  margin-top: -0.8vw;
+  display: flex;
+}
+
+.content .first .first_section .note .text .covid .bold {
+  font-size: 1.15vw;
+  color: #000000;
+  font-weight: 700;
+}
+
+.content .first .first_section .note .text .covid .data {
+  font-size: 1.15vw;
+  color: #000000;
+  font-weight: 350;
+  margin-left: 0.5vw;
+}
+
+.content .first .first_section .note .text .asthma {
+  margin-top: -0.8vw;
+  display: flex;
+}
+
+.content .first .first_section .note .text .asthma .bold {
+  font-size: 1.15vw;
+  color: #000000;
+  font-weight: 700;
+}
+
+.content .first .first_section .note .text .asthma .data {
+  font-size: 1.15vw;
+  color: #000000;
+  font-weight: 350;
+  margin-left: 0.5vw;
+}
+
+.content .first .second_section {
+  margin-left: 2vw;
+}
+
+.content .first .second_section .title {
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: #616161;
+  margin-top: 2.5vw;
+}
+
+.content .first .second_section .bieudohohap {
+  width: 100%;
+  height: 90%;
+}
+
+.content .firstbsi {
+  display: flex;
+}
+
+.content .firstbsi .first_section .note {
+  width: 45vw;
+  margin-top: 1vw;
+  padding: 0.5vw 2vw;
+  border: 0.1vw solid #004e75;
+  height: 88%;
+}
+
+.content .firstbsi .first_section .title_note {
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: #616161;
+  margin-top: 2.5vw;
+}
+
+.content .firstbsi .first_section .note .text .copd {
+  display: flex;
+}
+
+.content .firstbsi .first_section .note .text .copd .bold {
+  font-size: 1.15vw;
+  color: #000000;
+  font-weight: 700;
+}
+
+.content .firstbsi .first_section .note .text .copd input {
+  font-size: 1.15vw;
+  color: #000000;
+  font-weight: 350;
+  margin-left: 0.5vw;
+  height: 2.5vw;
+  margin-top: 0.5vw;
+  padding-left: 1vw;
+}
+
+.content .firstbsi .first_section .note .text .covid {
+  margin-top: 0.5vw;
+  display: flex;
+}
+
+.content .firstbsi .first_section .note .text .covid .bold {
+  font-size: 1.15vw;
+  color: #000000;
+  font-weight: 700;
+}
+
+.content .firstbsi .first_section .note .text .covid input {
+  font-size: 1.15vw;
+  color: #000000;
+  font-weight: 350;
+  margin-left: 0.5vw;
+  height: 2.5vw;
+  margin-top: 0.5vw;
+  padding-left: 1vw;
+}
+
+.content .firstbsi .first_section .note .text .asthma {
+  margin-top: 0.5vw;
+  display: flex;
+}
+
+.content .firstbsi .first_section .note .text .asthma .bold {
+  font-size: 1.15vw;
+  color: #000000;
+  font-weight: 700;
+}
+
+.content .firstbsi .first_section .note .text .asthma input {
+  font-size: 1.15vw;
+  color: #000000;
+  font-weight: 350;
+  margin-left: 0.5vw;
+  height: 2.5vw;
+  margin-top: 0.5vw;
+  padding-left: 1vw;
+}
+
+.content .firstbsi .second_section {
+  margin-left: 2vw;
+}
+
+.content .firstbsi .second_section .title {
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: #616161;
+  margin-top: 2.5vw;
+}
+
+.content .firstbsi .second_section input {
+  margin-bottom: 1vw;
+}
+
+.content .firstbsi .second_section canvas {
+  height: 100%;
+  width: 98%;
+}
+
+.content .second .first_section .note {
+  width: 45vw;
+  margin-top: 1vw;
+  padding: 0.5vw 2vw;
+  border: 0.1vw solid #004e75;
+  height: 25vw;
+}
+
+.content .second {
+  display: flex;
+}
+
+.content .second .first_section .title_note {
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: #616161;
+  margin-top: 4.5vw;
+}
+
+.content .second .second_section {
+  margin-left: 2vw;
+}
+
+.content .second .second_section .note {
+  width: 33vw;
+  margin-top: 1vw;
+  padding: 0.5vw 2vw;
+  border: 0.1vw solid #004e75;
+  height: 25vw;
+}
+
+.content .second .second_section .title_note {
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: #616161;
+  margin-top: 4.5vw;
+}
+
+.content .secondbsi {
+  margin-top: 1.1vw;
+  display: flex;
+}
+
+.content .secondbsi .first_section .title_note {
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: #616161;
+  margin-top: 4.5vw;
+}
+
+.content .secondbsi .first_section textarea {
+  font-family: "Inter", sans-serif;
+  width: 47vw;
+  margin-top: 0vw;
+  padding: 1vw 1vw;
+  border: 0.1vw solid #004e75;
+  font-size: 1.1vw;
+  resize: none;
+}
+
+.content .secondbsi .second_section {
+  margin-left: 2vw;
+}
+
+.content .secondbsi .second_section textarea {
+  font-family: "Inter", sans-serif;
+  width: 33vw;
+  margin-top: 0vw;
+  padding: 1vw 1vw;
+  border: 0.1vw solid #004e75;
+  font-size: 1.1vw;
+  resize: none;
+}
+
+.content .secondbsi .second_section .title_note {
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: #616161;
+  margin-top: 4.5vw;
+}
+
+.content .editbutton {
+  padding: 1.2vw;
+  background-color: #004e75;
+  border: none;
+  border-radius: 0.5vw;
+  margin: 2vw 0;
+  color: #ffffff;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1vw;
+  width: 89vw;
+}
+
+.content .editorbutton {
+  display: flex;
+}
+
+.content .editorbutton .cancel {
+  background-color: #ffffff;
+  border: 0.15vw solid #004e75;
+  border-radius: 0.5vw;
+  padding: 1vw;
+  margin-right: 1vw;
+  font-weight: 500;
+  font-size: 1.15vw;
+  text-align: center;
+  color: #004e75;
+  width: 55vw;
+}
+
+.content .editorbutton .save {
+  background-color: #004e75;
+  border: none;
+  border-radius: 0.5vw;
+  padding: 1vw;
+  font-weight: 500;
+  font-size: 1.15vw;
+  text-align: center;
+  color: #ffffff;
+  width: 55vw;
+}
+
+/*# sourceMappingURL=results.css.map */

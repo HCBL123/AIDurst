@@ -1,0 +1,169 @@
+<link rel="stylesheet" type="text/css" href="/css/results.css" />
+  <script>
+    $(document).ready(function() { $("#edit").hide(); $("#editor").hide();
+    $("#dctnote").hide(); $("#firstbsi").hide(); $("#secondbsi").hide();
+    $("#editbutton").hide(); $("#editorbutton").hide(); }); function
+    uploadBieuDoHoHap() { var imgcanvas =
+    document.getElementById("upload_bieudohohap"); var fileinput =
+    document.getElementById("upload"); var image = new SimpleImage(fileinput);
+    image.drawTo(imgcanvas); }
+  </script>
+
+  <body>
+    <section class="header" id="header">
+      <section class="first" id="first_header">
+        <img src="/images/logo.png" alt="AI Durst's logo" class="logo" />
+        <div class="search" id="search">
+          <i
+            class="fa-solid fa-magnifying-glass fa-sm"
+            id="search_icon"
+            style="margin-top: 0.95vw; margin-left: 0.5vw"
+          ></i>
+          <form><input id="search_box" class="search_box" /></form>
+        </div>
+        <div class="options" id="options">
+          <i
+            class="fa-regular fa-circle-question fa-lg"
+            style="color: #184e75"
+          ></i>
+          <i class="fa-regular fa-bell fa-lg" style="color: #184e75"></i>
+          <i class="fa-regular fa-user fa-lg" style="color: #184e75"></i>
+        </div>
+      </section>
+      <section class="second" id="second_header">
+        <a href="/books">Đặt lịch</a>
+        <a href="">Chỉ số</a>
+        <a href="">Cẩm nang</a>
+      </section>
+    </section>
+    <section class="content" id="content">
+      <p class="title" id="title">Sức khoẻ bệnh nhân</p>
+      <div class="info" id="info">
+        <div class="personal" id="personal">
+          <div class="information" id="information">
+            <p
+              style="color: #868686; font-weight: 550; font-size: 1.5vw; margin-top: -1vw;"
+            >Thông tin cá nhresults>
+            <div class="dichvu" id="dichvu">
+              <p style="font-weight: 600; font-size: 1.1vw;">Dịch vụ y tế: </p>
+              <p class="dichvuyte" id="dichvuyte"> Ngoại trú</p>
+            </div>
+            <div class="name" id="name">
+              <p style="font-weight: 600; font-size: 1.1vw;">Họ và tên: </p>
+              <p class="ten" id="ten">Mehrab Rappo </p>
+            </div>
+            <div class="code" id="code">
+              <p style="font-weight: 600; font-size: 1.1vw;">Mã số: </p>
+              <p class="max" id="max">A1</p>
+            </div>
+          </div>
+          <img
+            src="/images/imguser.png"
+            alt="AI Durst's logo"
+            class="userimage"
+            id="userimage"
+          />
+        </div>
+        <div class="orga" id="orga">
+          <p class="nameorga">BỆNH VIỆN Y DƯỢC HCM</p>
+          <p class="time" id="time">Thời gian: 7h - 7h30 November 4th 2024</p>
+          <!--khi add data thay-->
+          <p class="namedct" id="namedct">Bác sĩ: Phạm Minh Hoàng</p>
+          <!----...2024 với Phạm B thành data real bằng js/jquery đồ-->
+          <p class="aidurst" id="aidurst">Chẩn đoán bởi
+            <b style="color: red">AI Durst</b></p>
+        </div>
+      </div>
+      <section class="first" id="first">
+        <div class="first_section" id="first_section">
+          <p class="title_note" id="title_note">Chẩn đoán bệnh</p>
+          <div class="note" id="note">
+            <!--phần này là kết quả khám của AI + bác sĩ-->
+            <div class="text" id="text">
+              <div class="copd" id="copd">
+                <p class="bold" id="bold">COPD: </p>
+                <p class="data" id="data">{{results.copd}}% mắc bệnh</p>
+              </div>
+              <div class="covid" id="covid">
+                <p class="bold" id="bold">Covid-19: </p>
+                <p class="data" id="data">{{results.covid19}}% mắc bệnh</p>
+              </div>
+              <div class="asthma" id="asthma">
+                <p class="bold" id="bold">Asthma: </p>
+                <p class="data" id="data">{{results.asthma}}% mắc bệnh</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="second_section" id="second_section">
+          <p class="title" id="title">Biểu đồ hô hấp</p>
+          <img
+            src="/images/bieudohohap.png"
+            alt="AI Durst's logo"
+            class="bieudohohap"
+          />
+        </div>
+      </section>
+      <section class="firstbsi" id="firstbsi">
+        <div class="first_section" id="first_section">
+          <p class="title_note" id="title_note">Chẩn đoán bệnh</p>
+          <div class="note" id="note">
+            <!--phần này là kết quả khám của AI + bác sĩ-->
+            <div class="text" id="text">
+              <div class="copd" id="copd">
+                <p class="bold" id="bold">COPD: </p>
+                <input class="data" id="data" value="10% mắc bệnh" />
+              </div>
+              <div class="covid" id="covid">
+                <p class="bold" id="bold">Covid-19: </p>
+                <input class="data" id="data" value="0% mắc bệnh" />
+              </div>
+              <div class="asthma" id="asthma">
+                <p class="bold" id="bold">Asthma: </p>
+                <input class="data" id="data" value="20% mắc bệnh" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="second_section" id="second_section">
+          <p class="title" id="title">Biểu đồ hô hấp</p>
+          <div class="imageupload" id="imageupload">
+            <input
+              type="file"
+              multiple="false"
+              accept="image/*"
+              class="upload"
+              id="upload"
+              onchange="uploadBieuDoHoHap()"
+            />
+            <canvas class="upload_bieudohohap" id="upload_bieudohohap"></canvas>
+          </div>
+        </div>
+      </section>
+      <section class="second" id="second">
+        <div class="first_section" id="first_section">
+          <p class="title_note" id="title_note">Kết quả khám bệnh</p>
+          <div class="note" id="note">{{results.result}}</div>
+        </div>
+        <div class="second_section" id="second_section">
+          <p class="title_note" id="title_note">Khuyến cáo của bác sĩ</p>
+          <div class="note" id="note">{{results.sugg}}</div>
+        </div>
+      </section>
+      <section class="secondbsi" id="secondbsi">
+        <div class="first_section" id="first_section">
+          <p class="title_note" id="title_note">Kết quả khám bệnh</p>
+          <textarea class="note" id="note" rows="25"></textarea>
+        </div>
+        <div class="second_section" id="second_section">
+          <p class="title_note" id="title_note">Khuyến cáo của bác sĩ</p>
+          <textarea class="note" id="note" rows="25"></textarea>
+        </div>
+      </section>
+      <button class="editbutton" id="editbutton">EDIT INFORMATION</button>
+      <div class="editorbutton" id="editorbutton">
+        <button class="cancel" id="cancel">Cancel</button>
+        <button class="save" id="save">Save</button>
+      </div>
+    </section>
+  </body>
