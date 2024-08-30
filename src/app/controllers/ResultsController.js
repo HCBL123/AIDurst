@@ -1,4 +1,4 @@
-// Doctor models to access data from mongodb
+// Results models to access data from mongodb
 const Results = require("../models/Results");
 // FUNCTION to convert scheme to object
 const { mongooseToObject } = require("../../util/mongoose");
