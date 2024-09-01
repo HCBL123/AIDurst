@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
+// Model cho ket qua benh nhan
 const Results = new Schema({
   copd: { type: Number },
   covid19: { type: Number },
