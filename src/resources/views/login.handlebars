@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>AI Durst - Login</title>
+        <meta name = "description" content = "AI Durst">
+        <meta name = "viewport" content = "width=device-width, initial-scale=0">
+        <link rel = "stylesheet" type = "text/css" href = "/css/login.css">
+        <!-- Font Inter--> 
+        <script src="https://kit.fontawesome.com/b20eaf92de.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <script>
+        //thêm nếu php session (nếu bn -> formbn, nếu bs -> formbs) còn mặc định là formbn
+        $(document).ready(function(){
+            $("#formbs").hide();
+            $("#cdbn").click(function(){
+                $("#formbn").show();
+                $("#formbs").hide();
+                $("#cdbs").css("border-bottom", "0.15vw solid #C9C9C9");
+                $("#cdbs").css("color", "#8B8B8B");
+                $("#cdbs").css("font-weight", "500"); 
+                $("#cdbn").css("border-bottom", "0.25vw solid #4891B6");
+                $("#cdbn").css("color", "#4891B6");
+                $("#cdbn").css("font-weight", "600"); 
+            });
+            $("#cdbs").click(function(){
+                $("#formbs").show();
+                $("#formbn").hide();
+                $("#cdbn").css("border-bottom", "0.15vw solid #C9C9C9");
+                $("#cdbn").css("color", "#8B8B8B");
+                $("#cdbn").css("font-weight", "500"); 
+                $("#cdbs").css("border-bottom", "0.25vw solid #4891B6");
+                $("#cdbs").css("color", "#4891B6");
+                $("#cdbs").css("font-weight", "600"); 
+            });
+        });
+    </script>
+    <body>
+        <section class = "header" id = "header">
+            <section class = "first" id = "first">
+                <img src="/images/logo.png" alt="AI Durst's logo" class = "logo">
+                <div class = "search" id = "search">
+                    <i class="fa-solid fa-magnifying-glass fa-sm" id = "search_icon" style = "margin-top: 0.95vw; margin-left: 0.5vw"></i>
+                    <form method = "POST"><input id = "search_box" class = "search_box"></form>
+                </div>
+                <div class = "options" id = "options">
+                    <i class="fa-regular fa-circle-question fa-lg" style = "color: #184e75"></i>
+                    <i class="fa-regular fa-bell fa-lg" style = "color: #184e75"></i>
+                    <i class="fa-regular fa-user fa-lg" style = "color: #184e75"></i>
+                </div>
+            </section>
+            <section class = "second" id = "second">
+                <a href="">Đặt lịch</a>
+                <a href="">Chỉ số</a>
+                <a href="">Cẩm nang</a>
+            </section> 
+        </section>
+        <section class = "content" id = "content">
+            <p class = "title_s" id = "title_s">ĐỒNG HÀNH CÙNG</p>
+            <p class = "title_b" id = "title_b">AI-DURST</p>
+            <section class = "tabbar" id = "tabbar">
+                <div class = "cdbn" id = "cdbn">Chế độ BỆNH NHÂN</div>
+                <div class = "cdbs" id = "cdbs">Chế độ BÁC SĨ</div>
+            </section>
+            <section class = "formbn" id = "formbn">
+                <form method = "POST" >
+                    <label class = "codebnlabel" id = "codebnlabel">Mã bệnh nhân</label><br>
+                    <input type = "text" class = "codebn" id = "codebn" name = "codebn" placeholder = "Điền mã bệnh nhân của bạn..." required>
+                    <br><br><label class = "passbnlabel" id = "passbnlabel">Password</label><br>
+                    <input type = "password" class = "passbn" id = "passbn" name = "passbn" placeholder = "Điền mật khẩu của bạn..." required>
+                    <br><button class = "loginbuttonbn" id = "loginbuttonbn" type = "submit">ĐĂNG NHẬP</button>
+                </form>
+            </section>
+            <section class = "formbs" id = "formbs">
+                <form>
+                    <label class = "codebslabel" id = "codebslabel">Mã bác sĩ</label><br>
+                    <input type = "text" class = "codebs" id = "codebs" name = "codebs" placeholder = "Điền mã bác sĩ của bạn..." required>
+                    <br><br><label class = "passbslabel" id = "passbslabel">Password</label><br>
+                    <input type = "password" class = "passbs" id = "passbs" name = "passbs" placeholder = "Điền mật khẩu của bạn..." required>
+                    <br><button class = "loginbuttonbs" id = "loginbuttonbs" type = "submit">ĐĂNG NHẬP</button>
+                </form>
+            </section>
+            <br><p class = "changesignup" id = "changesignup">Chưa có tài khoản?</p>
+            <img src="/images/or.png" class = "or">
+            <div class = "logingoogle" id = "logingoogle">
+                <img src="/images/google.png" alt="Google" style = "width: 4%; height: 4%; margin-top: 0.5vw; margin-left: 17vw; margin-right: 1vw;">
+                <p class = "continuegg" id = "continuegg">Continue with Google</p>
+            </div>
+        </section>
+    </body>
+    <!---<foooter>
+        <section class = "footer" id = "footer">
+            <div class = "logo" id = "logo">
+                <img src="/images/logo.png" alt="AI Durst's logo" class = "logo">
+                <p style = "font-size: 0.9vw; color: #7c7c7c">© AIDURST | Terms of Use | Privacy</p>
+            </div>
+            <div class = "info" id = "info">
+                <p class = "info_more">ĐĂNG KÝ ĐỂ NHẬN <br> THÔNG BÁO SỚM NHẤT </p>
+                <div class = "email" id = "email">
+                    <form><input id = "email_box" class = "email_box"></form>
+                    <i class="fa-solid fa-arrow-right" style = "color: #184e75; margin-right: 0.5vw"></i>
+                </div>
+                <div class = "social" id = "social">
+                    <i class="fa-brands fa-square-instagram" style = "color: #184e75; margin-right: 0.5vw"></i>
+                    <i class="fa-brands fa-pinterest" style = "color: #184e75; margin-right: 0.5vw"></i>
+                    <i class="fa-brands fa-twitter" style = "color: #184e75; margin-right: 0.5vw"></i>
+                    <i class="fa-brands fa-facebook" style = "color: #184e75; margin-right: 0.5vw"></i>
+                </div>
+            </div>
+        </section>
+    </foooter> --->
+</html>

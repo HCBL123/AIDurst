@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0.5vw 0;
+  padding: 0;
+}
+
+.header {
+  padding: 0;
+}
+
+.header .first {
+  display: flex;
+}
+
+.header .first .logo {
+  width: 4%;
+  height: 4%;
+  margin-bottom: 0.5vw;
+  margin-left: 1vw;
+}
+
+.header .first .search {
+  height: 1.8vw;
+  display: flex;
+  margin-left: 15%;
+  padding-top: 0.5%;
+  padding-right: 0.5%;
+  padding-bottom: 0.25%;
+  border-bottom: 0.1vw solid #000000;
+}
+
+.header .first .search_box {
+  font-family: "Inter", sans-serif;
+  border: none;
+  width: 55vw;
+  font-size: 1.1vw;
+  color: #7c7c7c;
+  padding: 0 1vw;
+  margin-top: 0.3vw;
+}
+
+.header .first input {
+  margin-bottom: -1vw;
+}
+
+.header .first input:focus {
+  outline: none;
+  color: #7c7c7c;
+}
+
+.header .first .options {
+  height: 1.8vw;
+  display: flex;
+  margin-left: 12%;
+}
+
+.header .first .options i {
+  margin-right: 1.5vw;
+  margin-top: 19%;
+}
+
+.header .second {
+  background-color: #184e75;
+  padding: 1vw 5vw;
+  color: #ffffff;
+}
+
+.header .second a {
+  color: #ffffff;
+  text-decoration: None;
+  font-size: 0.9vw;
+  margin-right: 5vw;
+}
+
+.footer {
+  padding: 0 5vw;
+  display: flex;
+}
+
+.footer .logo {
+  width: 45%;
+  height: 45%;
+}
+
+.footer .info {
+  margin-top: 2.5%;
+  margin-left: 20%;
+}
+
+.footer .info .info_more {
+  font-weight: bold;
+  color: #184e75;
+  font-size: 1.8vw;
+}
+
+.footer .info .email {
+  height: 1.8vw;
+  display: flex;
+  padding-bottom: 0.25%;
+  border-bottom: 0.1vw solid #184e75;
+}
+
+.footer .info .email_box {
+  font-family: "Inter", sans-serif;
+  border: none;
+  width: 18vw;
+  font-size: 1.1vw;
+  color: #184e75;
+  padding: 0 1vw;
+}
+
+.footer .info .email input {
+  margin-bottom: -1vw;
+}
+
+.footer .info .email input:focus {
+  outline: none;
+  color: #184e75;
+}
+
+.footer .info .social {
+  margin: 1vw;
+}
+
+.content .title_s {
+  margin-top: 4vw;
+  color: #004e75;
+  font-weight: 600;
+  text-align: center;
+  font-size: 2.5vw;
+}
+
+.content .title_b {
+  margin-top: -2vw;
+  color: #004e75;
+  font-weight: 700;
+  text-align: center;
+  font-size: 5vw;
+}
+
+.content .tabbar {
+  display: flex;
+  margin-top: -2vw;
+  text-align: center;
+}
+
+.content .tabbar .cdbn {
+  margin-left: 24vw;
+  text-align: center;
+  width: 25vw;
+  color: #4891b6;
+  font-weight: 600;
+  font-size: 1.2vw;
+  border-bottom: 0.25vw solid #4891b6;
+  padding: 1vw;
+}
+
+.content .tabbar .cdbs {
+  text-align: center;
+  width: 25vw;
+  color: #8b8b8b;
+  font-weight: 500;
+  font-size: 1.2vw;
+  border-bottom: 0.15vw solid #c9c9c9;
+  padding: 1vw;
+}
+
+.content .formbn {
+  margin-top: 2.5vw;
+  margin-left: 27vw;
+}
+
+.content .formbn .codebnlabel {
+  font-weight: 600;
+  font-size: 1.2vw;
+}
+
+.content .formbn .codebn {
+  padding: 1vw;
+  border-radius: 0.5vw;
+  width: 45vw;
+  margin-top: 1vw;
+  border: 0.15vw solid #858585;
+  font-size: 1.1vw;
+  margin-bottom: 0.5vw;
+}
+
+.content .formbn .passbnlabel {
+  font-weight: 600;
+  font-size: 1.2vw;
+}
+
+.content .formbn .passbn {
+  padding: 1vw;
+  border-radius: 0.5vw;
+  width: 45vw;
+  margin-top: 1vw;
+  border: 0.15vw solid #858585;
+  font-size: 1.1vw;
+}
+
+.content .formbn .loginbuttonbn {
+  padding: 0.8vw;
+  border-radius: 0.3vw;
+  width: 47.3vw;
+  margin-top: 3vw;
+  border: none;
+  font-size: 1.1vw;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #003854;
+}
+
+.content .formbs {
+  margin-top: 2.5vw;
+  margin-left: 27vw;
+}
+
+.content .formbs .codebslabel {
+  font-weight: 600;
+  font-size: 1.2vw;
+}
+
+.content .formbs .codebs {
+  padding: 1vw;
+  border-radius: 0.5vw;
+  width: 45vw;
+  margin-top: 1vw;
+  border: 0.15vw solid #858585;
+  font-size: 1.1vw;
+  margin-bottom: 0.5vw;
+}
+
+.content .formbs .passbslabel {
+  font-weight: 600;
+  font-size: 1.2vw;
+}
+
+.content .formbs .passbs {
+  padding: 1vw;
+  border-radius: 0.5vw;
+  width: 45vw;
+  margin-top: 1vw;
+  border: 0.15vw solid #858585;
+  font-size: 1.1vw;
+}
+
+.content .formbs .loginbuttonbs {
+  padding: 0.8vw;
+  border-radius: 0.3vw;
+  width: 47.3vw;
+  margin-top: 3vw;
+  border: none;
+  font-size: 1.1vw;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #003854;
+}
+
+.content .changesignup {
+  color: #4891b6;
+  margin-top: 0vw;
+  font-size: 1vw;
+  font-weight: 500;
+  margin-left: 46.5vw;
+}
+
+.content .or {
+  text-align: center;
+  margin-left: 27.3vw;
+  width: 46.5%;
+}
+
+.content .logingoogle {
+  display: flex;
+  border: 0.2vw solid #4891b6;
+  margin-left: 27.7vw;
+  width: 45.5vw;
+  border-radius: 0.3vw;
+  margin-bottom: 2vw;
+}
+
+.content .logingoogle .continuegg {
+  color: #4891b6;
+  font-weight: 600;
+  font-size: 0.9vw;
+}
+
+/*# sourceMappingURL=login.css.map */

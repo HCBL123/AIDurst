@@ -3,9 +3,9 @@ const express = require("express");
 const router = express.Router();
 
 // Get view and db from Controllers
-const booksController = require("../app/controllers/BooksController");
+const profileController = require("../app/controllers/ProfileController");
 
-router.use("/:_id", booksController.show);
-router.use("/", booksController.index);
+router.get("/:username", profileController.show);
 
 module.exports = router;
+

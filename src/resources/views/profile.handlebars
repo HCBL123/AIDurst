@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>AI Durst - Intro</title>
+        <meta name = "description" content = "AI Durst">
+        <meta name = "viewport" content = "width=device-width, initial-scale=0">
+        <link rel = "stylesheet" type = "text/css" href = "/css/profile.css">
+        <!-- Font Inter--> 
+        <script src="https://kit.fontawesome.com/b20eaf92de.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <section class = "header" id = "header">
+            <section class = "first" id = "first">
+                <img src="/images/logo.png" alt="AI Durst's logo" class = "logo">
+                <div class = "search" id = "search">
+                    <i class="fa-solid fa-magnifying-glass fa-sm" id = "search_icon" style = "margin-top: 0.95vw; margin-left: 0.5vw"></i>
+                    <form><input id = "search_box" class = "search_box"></form>
+                </div>
+                <div class = "options" id = "options">
+                    <i class="fa-regular fa-circle-question fa-lg" style = "color: #184e75"></i>
+                    <i class="fa-regular fa-bell fa-lg" style = "color: #184e75"></i>
+                    <i class="fa-regular fa-user fa-lg" style = "color: #184e75"></i>
+                </div>
+            </section>
+            <section class = "second" id = "second">
+                <a href="">Đặt lịch</a>
+                <a href="">Chỉ số</a>
+                <a href="">Cẩm nang</a>
+                <a href="">Hồ sơ</a>
+            </section> 
+        </section>
+    </body>
+    <!---<foooter>
+        <section class = "footer" id = "footer">
+            <div class = "logo" id = "logo">
+                <img src="/images/logo.png" alt="AI Durst's logo" class = "logo">
+                <p style = "font-size: 0.9vw; color: #7c7c7c">© AIDURST | Terms of Use | Privacy</p>
+            </div>
+            <div class = "info" id = "info">
+                <p class = "info_more">ĐĂNG KÝ ĐỂ NHẬN <br> THÔNG BÁO SỚM NHẤT </p>
+                <div class = "email" id = "email">
+                    <form><input id = "email_box" class = "email_box"></form>
+                    <i class="fa-solid fa-arrow-right" style = "color: #184e75; margin-right: 0.5vw"></i>
+                </div>
+                <div class = "social" id = "social">
+                    <i class="fa-brands fa-square-instagram" style = "color: #184e75; margin-right: 0.5vw"></i>
+                    <i class="fa-brands fa-pinterest" style = "color: #184e75; margin-right: 0.5vw"></i>
+                    <i class="fa-brands fa-twitter" style = "color: #184e75; margin-right: 0.5vw"></i>
+                    <i class="fa-brands fa-facebook" style = "color: #184e75; margin-right: 0.5vw"></i>
+                </div>
+            </div>
+        </section>
+    </foooter> --->
+</html>
+<body>
+
+    <main>
+    <h1>Hồ sơ cá nhân</h1>
+    <form class="mt-4" method = "POST" action = "/">
+        <div class="form-container">
+            <div class="form-left">
+                <label for="name">Họ tên:</label>
+                <input type="text" id="name" name="name">
+                <label for="dob">Ngày tháng năm sinh:</label>
+                <input type="date" id="dob" name="dob">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+                <label for="address">Địa chỉ:</label>
+                <input type="text" id="address" name="address">
+            </div>
+            <div class="form-right">
+                <img src="/images/user-avatar.png" alt="User Avatar" class="avatar">
+                <p>Mã người dùng: <span id="user-id">123456</span></p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="save-btn">Save</button>
+            <button class="cancel-btn">Cancel</button>
+        </div>
+    </form>
+    </main>
+</body>
+</html>

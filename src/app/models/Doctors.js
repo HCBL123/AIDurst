@@ -7,6 +7,8 @@ const Doctors = new Schema({
   description: { type: String },
   email: { type: String },
   number: { type: String },
+  username: { type: String },
+  password: { type: String },
 });
 
 module.exports = mongoose.model("Doctors", Doctors);
