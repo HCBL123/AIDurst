@@ -1,76 +1,126 @@
-<!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <title>AI Durst - Calendar</title>
-        <meta name = "description" content = "AI Durst">
-        <meta name = "viewport" content = "width=device-width, initial-scale=0">
-        <link rel = "stylesheet" type = "text/css" href = "/css/calendar.css">
-        <!-- Font Inter--> 
-        <script src="https://kit.fontawesome.com/b20eaf92de.js" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <!--AI ĐOÁ CHỈNH GIÚP TUI CÁI FE ĐI HỎNG HẾT ÒI qwq-->
-    </head>
-    <body>
-        <section class = "header" id = "header">
-            <section class = "first" id = "first">
-                <img src="/images/logo.png" alt="AI Durst's logo" class = "logo">
-                <div class = "search" id = "search">
-                    <i class="fa-solid fa-magnifying-glass fa-sm" id = "search_icon" style = "margin-top: 0.95vw; margin-left: 0.5vw"></i>
-                    <form><input id = "search_box" class = "search_box"></form>
-                </div>
-                <div class = "options" id = "options">
-                    <i class="fa-regular fa-circle-question fa-lg" style = "color: #184e75"></i>
-                    <i class="fa-regular fa-bell fa-lg" style = "color: #184e75"></i>
-                    <i class="fa-regular fa-user fa-lg" style = "color: #184e75"></i>
-                </div>
-            </section>
-            <section class = "second" id = "second">
-                <a href="">Đặt lịch</a>
-                <a href="">Chỉ số</a>
-                <a href="">Cẩm nang</a>
-            </section> 
-        </section>
-        <section class = "calendar" id = "calendar">
-            <img src="/images/backgroundcalendar.png" alt="AI Durst's background" class = "image">
-            <p class = "title_b" id = "title_b">LỊCH KHÁM</p>
-            <button class = "dkilich" id = "dkilich" onclick="location.href='/pickingdate';">ĐĂNG KÍ LỊCH KHÁM MỚI</button>
-            <div class = "lichkham" id = "lichkham">
-                <p class = "lichkham_small" id = "lichkham_small" style = "left: 0vw; color: #4891B6; font-weight: 700;">LỊCH KHÁ</p>
-                <p class = "lichkham_small" id = "lichkham_small" style = "left: 11.8vw; color: #FFFFFF; font-weight: 600;">M SẮP DIỄN RA</p>
-            </div>
-            <section class = "lichkhamcontent" id = "lichkhamcontent"> 
-                <div class = "box" id = "box" style = "top: 51%; left: 7.7vw;">
-          <p class = "time" id = "time">{{result.time}}</p>
-          <p class = "content" id = "content">: {{result.location}}</p>
-          <a href="/calendar/{{result._id}}" class = "show" id = "show">XEM LỊCH KHÁM</a>
-                </div>
-            </section>
-            <div class = "historylich" id = "historylich">
-                <p class = "historylich_small" id = "historylich_small" style = "left: 0vw; color: #4891B6; font-weight: 700;">LỊCH SỬ K</p>
-                <p class = "historylich_small" id = "historylich_small" style = "left: 12vw; color: #FFFFFF; font-weight: 600;">HÁM BỆNH</p>
-            </div>
-            <section class = "kqkhamcontent" id = "kqkhamcontent">
-                <div class = "box" id = "box" style = "top: 78.5%; left: 7.7vw;">
-                    <p class = "time" id = "time">7h - 7h30</p>
-                    <p class = "content" id = "content">: Bệnh viện Y Dược HCM (bác sĩ Phạm Minh Hoàng)</p>
-                    <a href = "/results/66cfb4a0edd50ccda6c58cc1" class = "show" id = "show">XEM KẾT QUẢ KHÁM</a>
-                </div>
-                <div class = "box" id = "box" style = "top: 85.5%; left: 7.7vw;">
-                    <p class = "time" id = "time">7h - 7h30</p>
-                    <p class = "content" id = "content">: Bác sĩ riêng Nguyễn Hoàng Hải</p>
-                    <a href = "/results/66e857e512b98a9ce969728a" class = "show" id = "show" style = "margin-left: 49vw;">XEM KẾT QUẢ KHÁM</a>
-                </div>
-                <div class = "box" id = "box" style = "top: 91.9%; left: 7.7vw;">
-                    <p class = "time" id = "time">7h - 7h30</p>
-                    <p class = "content" id = "content">: Bệnh viện Y Dược HCM (bác sĩ Phạm Minh Hoàng)</p>
-                    <a href = "/results/66e8587f12b98a9ce969728b" class = "show" id = "show">XEM KẾT QUẢ KHÁM</a>
-                </div>
-                <div class = "box" id = "box" style = "top: 98.5%; left: 7.7vw;">
-                    <p class = "time" id = "time">7h - 7h30</p>
-                    <p class = "content" id = "content">: Bác sĩ riêng Nguyễn Hoàng Hải</p>
-                    <a href = "/results/66e858cf12b98a9ce969728c" class = "show" id = "show" style = "margin-left: 49vw;">XEM KẾT QUẢ KHÁM</a>
-                </div>
-            </section>
-        </section>
-    </body>
+<html lang="en">
+  <head>
+    <title>AI Durst - Calendar</title>
+    <meta name="description" content="AI Durst" />
+    <meta name="viewport" content="width=device-width, initial-scale=0" />
+    <link rel="stylesheet" type="text/css" href="/css/calendar.css" />
+    <!-- Font Inter-->
+    <script
+      src="https://kit.fontawesome.com/b20eaf92de.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    ></script>
+    <!--AI ĐOÁ CHỈNH GIÚP TUI CÁI FE ĐI HỎNG HẾT ÒI qwq-->
+  </head>
+  <body>
+    <section class="header" id="header">
+      <section class="first" id="first">
+        <img src="/images/logo.png" alt="AI Durst's logo" class="logo" />
+        <div class="search" id="search">
+          <i
+            class="fa-solid fa-magnifying-glass fa-sm"
+            id="search_icon"
+            style="margin-top: 0.95vw; margin-left: 0.5vw"
+          ></i>
+          <form><input id="search_box" class="search_box" /></form>
+        </div>
+        <div class="options" id="options">
+          <i
+            class="fa-regular fa-circle-question fa-lg"
+            style="color: #184e75"
+          ></i>
+          <i class="fa-regular fa-bell fa-lg" style="color: #184e75"></i>
+          <i class="fa-regular fa-user fa-lg" style="color: #184e75"></i>
+        </div>
+      </section>
+      <section class="second" id="second">
+        <a href="">Đặt lịch</a>
+        <a href="">Chỉ số</a>
+        <a href="">Cẩm nang</a>
+      </section>
+    </section>
+    <section class="calendar" id="calendar">
+      <img
+        src="/images/backgroundcalendar.png"
+        alt="AI Durst's background"
+        class="image"
+      />
+      <p class="title_b" id="title_b">LỊCH KHÁM</p>
+      <button
+        class="dkilich"
+        id="dkilich"
+        onclick="location.href='/pickingdate';"
+      >ĐĂNG KÍ LỊCH KHÁM MỚI</button>
+      <div class="lichkham" id="lichkham">
+        <p
+          class="lichkham_small"
+          id="lichkham_small"
+          style="left: 0vw; color: #4891B6; font-weight: 700;"
+        >LỊCH KHÁ</p>
+        <p
+          class="lichkham_small"
+          id="lichkham_small"
+          style="left: 11.8vw; color: #FFFFFF; font-weight: 600;"
+        >M SẮP DIỄN RA</p>
+      </div>
+      <section class="lichkhamcontent" id="lichkhamcontent">
+        <div class="box" id="box" style="top: 51%; left: 7.7vw;">
+          <p class="time" id="time">{{result.time}}</p>
+          <p class="content" id="content">: {{result.location}}</p>
+          <a href="/calendar/{{result._id}}" class="show" id="show">XEM LỊCH
+            KHÁM</a>
+        </div>
+      </section>
+      <div class="historylich" id="historylich">
+        <p
+          class="historylich_small"
+          id="historylich_small"
+          style="left: 0vw; color: #4891B6; font-weight: 700;"
+        >LỊCH SỬ K</p>
+        <p
+          class="historylich_small"
+          id="historylich_small"
+          style="left: 12vw; color: #FFFFFF; font-weight: 600;"
+        >HÁM BỆNH</p>
+      </div>
+      <section class="kqkhamcontent" id="kqkhamcontent">
+        <div class="box" id="box" style="top: 78.5%; left: 7.7vw;">
+          <p class="time" id="time">7h - 7h30</p>
+          <p class="content" id="content">: Bệnh viện Y Dược HCM (bác sĩ Phạm
+            Minh Hoàng)</p>
+          <a href="/results/66cfb4a0edd50ccda6c58cc1" class="show" id="show">XEM
+            KẾT QUẢ KHÁM</a>
+        </div>
+        <div class="box" id="box" style="top: 85.5%; left: 7.7vw;">
+          <p class="time" id="time">7h - 7h30</p>
+          <p class="content" id="content">: Bác sĩ riêng Nguyễn Hoàng Hải</p>
+          <a
+            href="/results/66e857e512b98a9ce969728a"
+            class="show"
+            id="show"
+            style="margin-left: 49vw;"
+          >XEM KẾT QUẢ KHÁM</a>
+        </div>
+        <div class="box" id="box" style="top: 91.9%; left: 7.7vw;">
+          <p class="time" id="time">7h - 7h30</p>
+          <p class="content" id="content">: Bệnh viện Y Dược HCM (bác sĩ Phạm
+            Minh Hoàng)</p>
+          <a href="/results/66e8587f12b98a9ce969728b" class="show" id="show">XEM
+            KẾT QUẢ KHÁM</a>
+        </div>
+        <div class="box" id="box" style="top: 98.5%; left: 7.7vw;">
+          <p class="time" id="time">7h - 7h30</p>
+          <p class="content" id="content">: Bác sĩ riêng Nguyễn Hoàng Hải</p>
+          <a
+            href="/results/66e858cf12b98a9ce969728c"
+            class="show"
+            id="show"
+            style="margin-left: 49vw;"
+          >XEM KẾT QUẢ KHÁM</a>
+        </div>
+      </section>
+    </section>
+  </body>
 </html>

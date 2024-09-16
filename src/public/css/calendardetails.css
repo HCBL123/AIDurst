@@ -149,14 +149,14 @@ body {
   font-weight: 700;
   font-size: 3vw;
   margin-left: 5%;
-  color: #004E75;
+  color: #004e75;
   margin-right: 5%;
   margin-top: -1vw;
 }
 
 .content .info .orga .time {
   font-size: 1.3vw;
-  color: #004E75;
+  color: #004e75;
   font-weight: 600;
   margin-top: -2.2vw;
   margin-left: 0.4vw;
@@ -164,7 +164,7 @@ body {
 
 .content .info .orga .namedct {
   font-size: 1.3vw;
-  color: #004E75;
+  color: #004e75;
   font-weight: 600;
   margin-top: -0.8vw;
   margin-left: 0.4vw;
@@ -172,7 +172,7 @@ body {
 
 .content .info .orga .aidurst {
   font-size: 1.3vw;
-  color: #004E75;
+  color: #004e75;
   font-weight: 600;
   margin-top: -0.8vw;
   margin-left: 0.4vw;
@@ -181,7 +181,7 @@ body {
 .content .note {
   margin-top: 1vw;
   padding: 0.5vw 2vw;
-  border: 0.1vw solid #004E75;
+  border: 0.1vw solid #004e75;
 }
 
 .content .title_note {
@@ -263,7 +263,7 @@ body {
 .content .dctnote {
   margin-top: 1vw;
   padding: 0.5vw 2vw;
-  border: 0.1vw solid #004E75;
+  border: 0.1vw solid #004e75;
 }
 
 .content .dctnote .text .time {
@@ -341,7 +341,7 @@ body {
 
 .content .edit {
   padding: 1.2vw;
-  background-color: #004E75;
+  background-color: #004e75;
   border: none;
   border-radius: 0.5vw;
   margin: 2vw 0;
@@ -358,19 +358,19 @@ body {
 
 .content .editor .cancel {
   background-color: #ffffff;
-  border: 0.15vw solid #004E75;
+  border: 0.15vw solid #004e75;
   border-radius: 0.5vw;
   padding: 1vw;
   margin-right: 1vw;
   font-weight: 500;
   font-size: 1.15vw;
   text-align: center;
-  color: #004E75;
+  color: #004e75;
   width: 55vw;
 }
 
 .content .editor .save {
-  background-color: #004E75;
+  background-color: #004e75;
   border: none;
   border-radius: 0.5vw;
   padding: 1vw;

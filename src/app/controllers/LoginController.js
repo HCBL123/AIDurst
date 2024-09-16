@@ -24,15 +24,16 @@ class LoginController {
 
   // [POST] /login
   async login(req, res, next) {
-    const usr = req.body.codebn, pass = req.body.passbn;
+    const usr = req.body.codebn,
+      pass = req.body.passbn;
     const user = await Doctors.exists({ username: usr, password: pass });
     if (!user) {
-      return res.status(400).json({ message: 'Invalid Credentials' });
+      return res.status(400).json({ message: "Invalid Credentials" });
     } else {
       req.session.isLoggedIn = true;
       req.session.username = usr;
 
-      res.redirect('/profile/' + usr);
+      res.redirect("/profile/" + usr);
     }
   }
   async logout(req, res, next) {
@@ -40,7 +41,7 @@ class LoginController {
       if (err) {
         console.log(err);
       } else {
-        res.redirect('/results');
+        res.redirect("/results");
       }
     });
   }

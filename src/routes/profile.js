@@ -8,4 +8,3 @@ const profileController = require("../app/controllers/ProfileController");
 router.get("/:username", profileController.show);
 
 module.exports = router;
-

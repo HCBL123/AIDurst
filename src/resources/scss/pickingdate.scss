@@ -1,208 +1,203 @@
-
-
-body, p, form {
-    margin: 0;
-    padding: 0;
+body,
+p,
+form {
+  margin: 0;
+  padding: 0;
 }
 
 main {
-    padding: 20px;
-    
+  padding: 20px;
 }
 h1 {
-    padding-left: 20px;
-    margin: 0
+  padding-left: 20px;
+  margin: 0;
 }
 .form-container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .form-left {
-    width: 50%;
-    padding: 20px;
-    box-sizing: border-box;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-.form-left label, .form-left input {
-    display: block;
-    width: 100%;
-    margin-bottom: 15px;
-    font-weight:bold
-    
-
+.form-left label,
+.form-left input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  font-weight: bold;
 }
 
 .form-left input {
-    
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 100%; /* Match the width of form-left */
-    padding: 10px 20px; /* Optional: padding to align with form-left */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  width: 100%; /* Match the width of form-left */
+  padding: 10px 20px; /* Optional: padding to align with form-left */
 }
 
 .form-right {
-    width: 50%;
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: center;
+  width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .avatar {
-    width: 100px;
-    height: 230px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #ddd;
-    margin-bottom: 100px;
+  width: 100px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  margin-bottom: 100px;
 }
 
 .buttons {
-    display: flex;
-    width: 105%; /* Match the width of form-left */
-    padding: 0 20px; /* Optional: padding to align with form-left */
-    margin-top: 20px;
+  display: flex;
+  width: 105%; /* Match the width of form-left */
+  padding: 0 20px; /* Optional: padding to align with form-left */
+  margin-top: 20px;
 }
 
 .buttons button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 48%; /* Adjust width to fit within container */
-    box-sizing: border-box;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 48%; /* Adjust width to fit within container */
+  box-sizing: border-box;
 }
 
 .save-btn {
-    background-color: #184e75;
-    color: white;
-    align-self: flex-start; /* Align with the start of the container */
-    font-size: larger;
-    font-weight: bold;
+  background-color: #184e75;
+  color: white;
+  align-self: flex-start; /* Align with the start of the container */
+  font-size: larger;
+  font-weight: bold;
 }
 
 .backpage {
-    margin-left: 20px; /* Khoảng cách từ nút Save */
-    margin-top: 10px;
+  margin-left: 20px; /* Khoảng cách từ nút Save */
+  margin-top: 10px;
 }
 
 .backpage a {
-    color: #184e75;
-    text-decoration: none;
-    font-size: 1rem;
+  color: #184e75;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 .backpage a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
-
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 body {
-    font-family: "Inter", sans-serif;
-    font-optical-sizing: 40;
-    font-style: normal;
-    margin: 0.5vw 0;
-    padding: 0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: 40;
+  font-style: normal;
+  margin: 0.5vw 0;
+  padding: 0;
 }
 .header {
-    padding: 0;
+  padding: 0;
 }
 .header .first {
-    display: flex;
+  display: flex;
 }
 .header .first .logo {
-    width: 4%;
-    height: 4%;
-    margin-bottom: 0.5vw;
-    margin-left: 1vw;
+  width: 4%;
+  height: 4%;
+  margin-bottom: 0.5vw;
+  margin-left: 1vw;
 }
 .header .first .search {
-    height: 1.8vw;
-    display: flex;
-    margin-left: 15%;
-    padding-top: 0.5%;
-    padding-right: 0.5%;
-    padding-bottom: 0.25%;
-    border-bottom: 0.1vw solid #000000;
+  height: 1.8vw;
+  display: flex;
+  margin-left: 15%;
+  padding-top: 0.5%;
+  padding-right: 0.5%;
+  padding-bottom: 0.25%;
+  border-bottom: 0.1vw solid #000000;
 }
 .header .first .search_box {
-    font-family: "Inter", sans-serif;
-    border: none;
-    width: 55vw;
-    font-size: 1.1vw;
-    color: #7c7c7c;
-    padding: 0 1vw;
-    margin-top: 0.3vw;
+  font-family: "Inter", sans-serif;
+  border: none;
+  width: 55vw;
+  font-size: 1.1vw;
+  color: #7c7c7c;
+  padding: 0 1vw;
+  margin-top: 0.3vw;
 }
 .header .first input {
-    margin-bottom: -1vw;
+  margin-bottom: -1vw;
 }
 .header .first input:focus {
-    outline: none;
-    color: #7c7c7c;
-}  
+  outline: none;
+  color: #7c7c7c;
+}
 .header .first .options {
-    height: 1.8vw;
-    display: flex;
-    margin-left: 12%;
+  height: 1.8vw;
+  display: flex;
+  margin-left: 12%;
 }
 .header .first .options i {
-    margin-right: 1.5vw;
-    margin-top: 19%;
+  margin-right: 1.5vw;
+  margin-top: 19%;
 }
 .header .second {
-    background-color: #184e75;
-    padding: 1vw 5vw;
-    color: #ffffff;
+  background-color: #184e75;
+  padding: 1vw 5vw;
+  color: #ffffff;
 }
 .header .second a {
-    color: #ffffff;
-    text-decoration: None;
-    font-size: 0.9vw;
-    margin-right: 5vw;
+  color: #ffffff;
+  text-decoration: None;
+  font-size: 0.9vw;
+  margin-right: 5vw;
 }
 .footer {
-    padding: 0 5vw;
-    display: flex;
+  padding: 0 5vw;
+  display: flex;
 }
 .footer .logo {
-    width: 45%;
-    height: 45%;
+  width: 45%;
+  height: 45%;
 }
 .footer .info {
-    margin-top: 2.5%;
-    margin-left: 20%;
+  margin-top: 2.5%;
+  margin-left: 20%;
 }
 .footer .info .info_more {
-    font-weight: bold;
-    color: #184e75;
-    font-size: 1.8vw;
+  font-weight: bold;
+  color: #184e75;
+  font-size: 1.8vw;
 }
 .footer .info .email {
-    height: 1.8vw;
-    display: flex;
-    padding-bottom: 0.25%;
-    border-bottom: 0.1vw solid #184e75;
+  height: 1.8vw;
+  display: flex;
+  padding-bottom: 0.25%;
+  border-bottom: 0.1vw solid #184e75;
 }
 .footer .info .email_box {
-    font-family: "Inter", sans-serif;
-    border: none;
-    width: 18vw;
-    font-size: 1.1vw;
-    color: #184e75;
-    padding: 0 1vw;
+  font-family: "Inter", sans-serif;
+  border: none;
+  width: 18vw;
+  font-size: 1.1vw;
+  color: #184e75;
+  padding: 0 1vw;
 }
 .footer .info .email input {
-    margin-bottom: -1vw;
+  margin-bottom: -1vw;
 }
 .footer .info .email input:focus {
-    outline: none;
-    color: #184e75;
-}  
+  outline: none;
+  color: #184e75;
+}
 .footer .info .social {
-    margin: 1vw;
+  margin: 1vw;
 }

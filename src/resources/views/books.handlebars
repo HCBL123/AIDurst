@@ -1,73 +1,73 @@
-<!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="/css/books.css" />
-<body>
-  <section class="header" id="header">
-    <section class="first" id="first">
-      <img src="/images/logo.png" alt="AI Durst's logo" class="logo" />
-      <div class="search" id="search">
-        <i
-          class="fa-solid fa-magnifying-glass fa-sm"
-          id="search_icon"
-          style="margin-top: 0.95vw; margin-left: 0.5vw"
-        ></i>
-        <form><input id="search_box" class="search_box" /></form>
-      </div>
-      <div class="options" id="options">
-        <i
-          class="fa-regular fa-circle-question fa-lg"
-          style="color: #184e75"
-        ></i>
-        <i class="fa-regular fa-bell fa-lg" style="color: #184e75"></i>
-        <i class="fa-regular fa-user fa-lg" style="color: #184e75"></i>
-      </div>
+<html lang="en">
+  <body>
+    <section class="header" id="header">
+      <section class="first" id="first">
+        <img src="/images/logo.png" alt="AI Durst's logo" class="logo" />
+        <div class="search" id="search">
+          <i
+            class="fa-solid fa-magnifying-glass fa-sm"
+            id="search_icon"
+            style="margin-top: 0.95vw; margin-left: 0.5vw"
+          ></i>
+          <form><input id="search_box" class="search_box" /></form>
+        </div>
+        <div class="options" id="options">
+          <i
+            class="fa-regular fa-circle-question fa-lg"
+            style="color: #184e75"
+          ></i>
+          <i class="fa-regular fa-bell fa-lg" style="color: #184e75"></i>
+          <i class="fa-regular fa-user fa-lg" style="color: #184e75"></i>
+        </div>
+      </section>
+      <section class="second" id="second">
+        <a href="">Đặt lịch</a>
+        <a href="">Chỉ số</a>
+        <a href="">Cẩm nang</a>
+      </section>
     </section>
-    <section class="second" id="second">
-      <a href="">Đặt lịch</a>
-      <a href="">Chỉ số</a>
-      <a href="">Cẩm nang</a>
-    </section>
-  </section>
-  <section class="profile" id="profile">
-    <div class="semi" id="semi">
-      <div class="left" id="left">
-        <p class="title" id="title">Hồ sơ bác sĩ</p>
-        <a href="" class="return" id="return">Quay lại trang trước...</a>
-        <div class="instruct" id="instruct">Hãy chọn một bác sĩ để đặt lịch</div>
+    <section class="profile" id="profile">
+      <div class="semi" id="semi">
+        <div class="left" id="left">
+          <p class="title" id="title">Hồ sơ bác sĩ</p>
+          <a href="" class="return" id="return">Quay lại trang trước...</a>
+          <div class="instruct" id="instruct">Hãy chọn một bác sĩ để đặt lịch</div>
+        </div>
+        <div class="right" id="right">
+          <p class="titlecom" id="titlecom">BỆNH VIỆN Y DƯỢC HCM</p>
+          <p class="time" id="time">Thời gian: 7h - 7h30</p>
+          <p class="bsi" id="bsi">Số bác sĩ có sẵn: 2</p>
+        </div>
       </div>
-      <div class="right" id="right">
-        <p class="titlecom" id="titlecom">BỆNH VIỆN Y DƯỢC HCM</p>
-        <p class="time" id="time">Thời gian: 7h - 7h30</p>
-        <p class="bsi" id="bsi">Số bác sĩ có sẵn: 2</p>
-      </div>
-    </div>
-    <div class="content" id="content">
-      <div class="row" id="row">
-        {{#each profiles}}
-          <div
-            class="each"
-            id="each"
-            style="background-color: rgba(255, 196, 81, 0.3);"
-          >
-          <a href = "/books/{{this._id}}">
-            <img
-              src="/images/bsi1.png"
-              alt="AI Durst's doctor"
-              class="bsi"
-              style="width: 100%; height: 75%;"
-            /></a>
-            <div class="namebsi" id="namebsi">
-              <p
-                style="font-size: 1.1vw; font-weight: 500; margin-top: 2vw;"
-              >Bác sĩ</p>
-            <a href = "/books/{{this._id}}">
-              <p class="name" id="name">{{this.name}}</p>
-              </a>
+      <div class="content" id="content">
+        <div class="row" id="row">
+          {{#each profiles}}
+            <div
+              class="each"
+              id="each"
+              style="background-color: rgba(255, 196, 81, 0.3);"
+            >
+              <a href="/books/{{this._id}}">
+                <img
+                  src="/images/bsi1.png"
+                  alt="AI Durst's doctor"
+                  class="bsi"
+                  style="width: 100%; height: 75%;"
+                /></a>
+              <div class="namebsi" id="namebsi">
+                <p
+                  style="font-size: 1.1vw; font-weight: 500; margin-top: 2vw;"
+                >Bác sĩ</p>
+                <a href="/books/{{this._id}}">
+                  <p class="name" id="name">{{this.name}}</p>
+                </a>
+              </div>
+              <p class="description" id="description">{{this.description}}</p>
             </div>
-            <p class="description" id="description">{{this.description}}</p>
-          </div>
-        {{/each}}
+          {{/each}}
+        </div>
       </div>
-    </div>
-  </section>
-</body>
+    </section>
+  </body>
 </html>

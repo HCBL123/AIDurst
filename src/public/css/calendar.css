@@ -101,7 +101,7 @@ body {
   border: none;
   font-size: 1.1vw;
   font-weight: 600;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #003854;
 }
 
@@ -121,9 +121,9 @@ body {
 .calendar .lichkhamcontent .box {
   position: absolute;
   display: flex;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding-left: 6vw;
-  border: 0.2vw solid #004E75;
+  border: 0.2vw solid #004e75;
   width: 83vw;
 }
 
@@ -132,12 +132,12 @@ body {
 }
 
 .calendar .lichkhamcontent .box .time {
-  color: #004E75;
+  color: #004e75;
   font-weight: 800;
 }
 
 .calendar .lichkhamcontent .box .show {
-  color: #9F9F9F;
+  color: #9f9f9f;
   font-weight: 650;
   text-decoration: none;
   font-size: 1vw;
@@ -161,9 +161,9 @@ body {
 .calendar .kqkhamcontent .box {
   position: absolute;
   display: flex;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding-left: 6vw;
-  border: 0.2vw solid #004E75;
+  border: 0.2vw solid #004e75;
   width: 83vw;
 }
 
@@ -172,12 +172,12 @@ body {
 }
 
 .calendar .kqkhamcontent .box .time {
-  color: #004E75;
+  color: #004e75;
   font-weight: 800;
 }
 
 .calendar .kqkhamcontent .box .show {
-  color: #9F9F9F;
+  color: #9f9f9f;
   font-weight: 650;
   text-decoration: none;
   font-size: 1vw;
