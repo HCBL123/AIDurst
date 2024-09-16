@@ -19,11 +19,12 @@ class BooksController {
   // [GET] /:slug
   show(req, res, next) {
     Doctors.findOne({ _id: req.params._id })
-      .then((profiles) => {
-        res.render("specbooks", {
-          profiles: mongooseToObject(profiles),
-        });
-      })
+      .then(
+        (profiles) => {
+          res.render("specbooks", {
+            profiles: mongooseToObject(profiles),
+          });
+        })
       .catch(next);
   }
 }

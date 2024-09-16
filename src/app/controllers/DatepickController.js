@@ -27,13 +27,7 @@ class ResultsController {
     const isLoggedIn = req.session.isLoggedIn;
     const username = req.session.username;
     if (isLoggedIn) {
-      Results.findOne({ _id: req.params.id })
-        .then((results) => {
-          res.render("results", {
-            results: mongooseToObject(results),
-          });
-        })
-        .catch(next);
+      res.render("pickingdate");
     } else {
       res.send("Please log in");
     }

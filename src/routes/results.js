@@ -5,7 +5,7 @@ const router = express.Router();
 // Get view and db from Controllers
 const resultsController = require("../app/controllers/ResultsController");
 
-router.use("/:id", resultsController.show);
+router.use("/:id", resultsController.index);
 router.use("/", resultsController.show);
 
 module.exports = router;

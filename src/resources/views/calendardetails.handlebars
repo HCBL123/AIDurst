@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>AI Durst - Result</title>
+        <meta name = "description" content = "AI Durst">
+        <meta name = "viewport" content = "width=device-width, initial-scale=0">
+        <link rel = "stylesheet" type = "text/css" href = "/css/calendardetails.css">
+        <!-- Font Inter--> 
+        <script src="https://kit.fontawesome.com/b20eaf92de.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <!--READ CALENDARDETAILS.TXT TRC-->
+    </head>
+    <script>
+        $(document).ready(function(){
+            $("#edit").hide();
+            $("#editor").hide();
+            $("#dctnote").hide();
+        });
+    </script>
+    <body>
+        <section class = "header" id = "header">
+            <section class = "first" id = "first">
+                <img src="/images/logo.png" alt="AI Durst's logo" class = "logo">
+                <div class = "search" id = "search">
+                    <i class="fa-solid fa-magnifying-glass fa-sm" id = "search_icon" style = "margin-top: 0.95vw; margin-left: 0.5vw"></i>
+                    <form><input id = "search_box" class = "search_box"></form>
+                </div>
+                <div class = "options" id = "options">
+                    <i class="fa-regular fa-circle-question fa-lg" style = "color: #184e75"></i>
+                    <i class="fa-regular fa-bell fa-lg" style = "color: #184e75"></i>
+                    <i class="fa-regular fa-user fa-lg" style = "color: #184e75"></i>
+                </div>
+            </section>
+            <section class = "second" id = "second">
+                <a href="">Đặt lịch</a>
+                <a href="">Chỉ số</a>
+                <a href="">Cẩm nang</a>
+            </section> 
+        </section>
+        <section class = "content" id = "content">
+            <p class = "title" id = "title">Sức khoẻ bệnh nhân</p>
+            <div class = "info" id = "info">
+                <div class = "personal" id = "personal">
+                    <div class = "information" id = "information">
+                        <p style = "color: #868686; font-weight: 550; font-size: 1.5vw; margin-top: -1vw;">Thông tin cá nhân</p>
+                        <div class = "dichvu" id = "dichvu">
+                            <p style = "font-weight: 600; font-size: 1.1vw;">Dịch vụ y tế: </p>
+                            <p class = "dichvuyte" id = "dichvuyte"> Ngoại trú</p>
+                        </div>
+                        <div class = "name" id = "name">
+                            <p style = "font-weight: 600; font-size: 1.1vw;">Họ và tên: </p>
+                            <p class = "ten" id = "ten">Mehrab Rappo </p>
+                        </div>
+                        <div class = "code" id = "code">
+                            <p style = "font-weight: 600; font-size: 1.1vw;">Mã số: </p>
+              <p class = "max" id = "max">{{result.code}}</p>
+                        </div>
+                    </div>
+                    <img src="/images/imguser.png" alt="AI Durst's logo" class = "userimage" id = "userimage">
+                </div>
+                <div class = "orga" id = "orga">
+                    <p class = "nameorga">BỆNH VIỆN Y DƯỢC HCM</p>
+          <p class = "time" id = "time">Thời gian: {{result.time}}</p> <!--khi add data thay-->
+          <p class = "namedct" id = "namedct">Bác sĩ: {{result.doctor}}</p>                   <!---7h-...2024 với Phạm B thành data real bằng js/jquery đồ-->
+                    <p class = "aidurst" id = "aidurst">Chẩn đoán bởi <b style = "color: red">AI Durst</style></p>
+                </div>
+            </div>
+            <p class = "title_note" id = "title_note">Ghi chú khám bệnh</p>
+            <div class = "note" id = "note"> <!--phần này hiện khi trong chế độ bệnh nhân-->
+                <div class = "text" id = "text">
+                    <div class = "time" id = "time">
+                        <p class = "bold" id = "bold">Thời gian khám: </p>
+            <p class = "data" id = "data">{{result.time}}</p>
+                    </div>
+                    <div class = "place" id = "place">
+                        <p class = "bold" id = "bold">Địa điểm khám: </p>
+            <p class = "data" id = "data">{{result.location}}</p>
+                    </div>
+                    <div class = "dct" id = "dct">
+                        <p class = "bold" id = "bold">Bác sĩ - tổ chức: </p>
+            <p class = "data" id = "data">{{result.doctor}}</p>
+                    </div>
+                    <div class = "dct_note" id = "dct_note">
+                        <p class = "bold" id = "bold">Ghi chú của bác sĩ: </p>
+            <p class = "data" id = "data">{{result.note}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class = "dctnote" id = "dctnote"> <!--phần này hiện khi trong chế độ bác sĩ-->
+                <div class = "text" id = "text">
+                    <div class = "time" id = "time">
+                        <p class = "bold" id = "bold">Thời gian khám: </p>
+                        <p class = "data" id = "data">7h - 7h30</p>
+                    </div>
+                    <div class = "place" id = "place">
+                        <p class = "bold" id = "bold">Địa điểm khám: </p>
+                        <input class = "data" id = "data" value = "Phòng 08 - Tầng 1 - Bệnh viện Y Dược HCM"></input>
+                    </div>
+                    <div class = "dct" id = "dct">
+                        <p class = "bold" id = "bold">Bác sĩ - tổ chức: </p>
+                        <p class = "data" id = "data">Phạm B - Bệnh viện Y Dược HCM</p>
+                    </div>
+                    <div class = "dct_note" id = "dct_note">
+                        <p class = "bold" id = "bold">Ghi chú của bác sĩ: </p>
+                        <input class = "data" id = "data" value = "Blah blah blah"></input>
+                    </div>
+                </div>
+            </div>
+            <button class = "edit" id = "edit">EDIT INFORMATION</button>
+            <div class = "editor" id = "editor">
+                <button class = "cancel" id = "cancel">Cancel</button>
+                <button class = "save" id = "save">Save</button>
+            </div>
+        </section>
+    </body>
+</html>

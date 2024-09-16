@@ -8,11 +8,15 @@ const booksRouter = require("./books");
 const loginRouter = require("./login");
 const supportRouter = require("./support");
 const profileRouter = require("./profile");
+const datepickRouter = require("./datepick");
+const calendarRouter = require("./calendar");
 
 function route(app) {
   // [GET] /profiles
   //    app.use("/profiles", profilesRouter);
   app.use("/profile", profileRouter);
+
+  app.use("/calendar", calendarRouter);
 
   app.use("/results", resultsRouter);
 
@@ -21,6 +25,8 @@ function route(app) {
   app.use("/login", loginRouter);
 
   app.use("/support", supportRouter);
+
+  app.use("/pickingdate", datepickRouter);
 
   // [GET] /
   app.get("/", (req, res) => {
