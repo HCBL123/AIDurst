@@ -4,7 +4,6 @@ const Results = require("../models/Results");
 const { mongooseToObject } = require("../../util/mongoose");
 
 class ResultsController {
-  // [GET] /results/:_id
   show(req, res, next) {
     const sessionData = req.session;
     const isLoggedIn = req.session.isLoggedIn;

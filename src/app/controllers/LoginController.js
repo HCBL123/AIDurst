@@ -5,8 +5,6 @@ const { multipleMongooseToObject } = require("../../util/mongoose");
 const { mongooseToObject } = require("../../util/mongoose");
 
 class LoginController {
-  // [GET] /books
-  //
   index(req, res, next) {
     Doctors.find({})
       .then((profiles) => {

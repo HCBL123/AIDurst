@@ -4,7 +4,6 @@ const Doctor = require("../models/Doctors");
 const { multipleMongooseToObject } = require("../../util/mongoose");
 
 class ProfilesController {
-  // [GET] /profiles
   index(req, res, next) {
     Doctor.find({})
       .then((results) => {
@@ -15,7 +14,6 @@ class ProfilesController {
       .catch(next);
   }
 
-  // [GET] /:slug
   show(req, res) {
     res.render("profile");
   }
