@@ -45,7 +45,7 @@ class LoginController {
       if (err) {
         console.log(err);
       } else {
-        res.redirect("/home");
+        res.redirect("home");
       }
     });
   }

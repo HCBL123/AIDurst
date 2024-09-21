@@ -4,6 +4,7 @@ const path = require("path");
 const route = require("./routes");
 var bodyParser = require("body-parser");
 const session = require("express-session");
+const port = process.env.PORT || 4000;
 
 const app = express();
 const db = require("./config/db");
@@ -32,4 +33,4 @@ app.use("/public", express.static(path.join(__dirname)));
 // Routes init
 route(app);
 
-app.listen(3000);
+app.listen(port);
