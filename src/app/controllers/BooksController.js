@@ -1,31 +1,33 @@
-// Doctor models to access data from mongodb
 const Doctors = require("../models/Doctors");
-// FUNCTION to convert scheme to object
-const { multipleMongooseToObject } = require("../../util/mongoose");
-const { mongooseToObject } = require("../../util/mongoose");
+const { multipleMongooseToObject, mongooseToObject } = require("../../util/mongoose");
 
 class BooksController {
-  // [GET] /books
-  index(req, res, next) {
-    Doctors.find({})
-      .then((profiles) => {
-        res.render("books", {
-          profiles: multipleMongooseToObject(profiles),
-        });
-      })
-      .catch(next);
-  }
+    async index(req, res, next) {
+        try {
+            const profiles = await Doctors.find({});
+            res.render("books", {
+                profiles: multipleMongooseToObject(profiles),
+            });
+        } catch (err) {
+            next(err);
+        }
+    }
 
-  // [GET] /:slug
-  show(req, res, next) {
-    Doctors.findOne({ _id: req.params._id })
-      .then((profiles) => {
-        res.render("specbooks", {
-          profiles: mongooseToObject(profiles),
-        });
-      })
-      .catch(next);
-  }
+    async show(req, res, next) {
+        try {
+            const profile = await Doctors.findById(req.params._id);
+
+            if (!profile) {
+                return res.status(404).send("Profile not found");
+            }
+
+            res.render("specbooks", {
+                profiles: mongooseToObject(profile),
+            });
+        } catch (err) {
+            next(err);
+        }
+    }
 }
 
 module.exports = new BooksController();

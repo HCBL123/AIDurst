@@ -1,12 +1,32 @@
 <link rel="stylesheet" type="text/css" href="/css/results.css" />
   <script>
-    $(document).ready(function() { $("#edit").hide(); $("#editor").hide();
-    $("#dctnote").hide(); $("#firstbsi").hide(); $("#secondbsi").hide();
-    $("#editbutton").hide(); $("#editorbutton").hide(); }); function
-    uploadBieuDoHoHap() { var imgcanvas =
-    document.getElementById("upload_bieudohohap"); var fileinput =
-    document.getElementById("upload"); var image = new SimpleImage(fileinput);
-    image.drawTo(imgcanvas); }
+    $(document).ready(function() {
+      // Hide elements initially
+      const elementsToHide = [
+        "#edit",
+        "#editor",
+        "#dctnote", 
+        "#firstbsi",
+        "#secondbsi",
+        "#editbutton",
+        "#editorbutton"
+      ];
+      
+      elementsToHide.forEach(element => $(element).hide());
+    });
+
+    function uploadBieuDoHoHap() {
+      const imgCanvas = document.getElementById("upload_bieudohohap");
+      const fileInput = document.getElementById("upload");
+      
+      if (!imgCanvas || !fileInput) {
+        console.error("Required elements not found");
+        return;
+      }
+      
+      const image = new SimpleImage(fileInput);
+      image.drawTo(imgCanvas);
+    }
   </script>
 
   <body>

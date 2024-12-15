@@ -6,6 +6,6 @@ const router = express.Router();
 const supportController = require("../app/controllers/SupportController");
 
 router.get("/", supportController.show);
-router.use("/:id", supportController.show);
+router.get("/:id", supportController.show);
 
 module.exports = router;

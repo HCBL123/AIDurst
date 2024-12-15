@@ -1,10 +1,10 @@
 // Router for /profiles page
 const express = require("express");
 const router = express.Router();
-
-// Get view and db from Controllers
 const profileController = require("../app/controllers/ProfileController");
+const authMiddleware = require("../middleware/auth");
 
-router.get("/:username", profileController.show);
+// Profile routes
+router.get("/:username", authMiddleware, profileController.show);
 
 module.exports = router;

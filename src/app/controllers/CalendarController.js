@@ -1,55 +1,56 @@
-// Results models to access data from mongodb
 const Results = require("../models/Results");
-// FUNCTION to convert scheme to object
-const {
-  mongooseToObject,
-  multipleMongooseToObject,
-} = require("../../util/mongoose");
+const { mongooseToObject } = require("../../util/mongoose");
 
-class ResultsController {
-  // [GET] /results/:_id
-  show(req, res, next) {
-    const sessionData = req.session;
-    const isLoggedIn = req.session.isLoggedIn;
-    const username = req.session.username;
-    if (isLoggedIn) {
-      Results.findOne({ username: username })
-        .then((results) =>
-          res.render("calendar", { result: mongooseToObject(results) }),
-        )
-        .catch(next);
-    } else {
-      res.send("Please log in");
+class CalendarController {
+    // Get calendar view
+    async show(req, res, next) {
+        try {
+            const { isLoggedIn, username } = req.session;
+
+            if (!isLoggedIn) {
+                return res.status(401).send("Please log in");
+            }
+
+            const results = await Results.findOne({ username });
+            res.render("calendar", { result: mongooseToObject(results) });
+        } catch (err) {
+            next(err);
+        }
     }
-  }
 
-  index(req, res, next) {
-    const sessionData = req.session;
-    const isLoggedIn = req.session.isLoggedIn;
-    const username = req.session.username;
+    // Update and display calendar
+    async index(req, res, next) {
+        try {
+            const { isLoggedIn, username } = req.session;
 
-    Results.updateOne({ username: username }, req.body).then().catch(next);
-    Results.findOne({ username: username })
-      .then((results) =>
-        res.render("calendar", {
-          result: mongooseToObject(results),
-        }),
-      )
-      .catch(next);
-  }
+            if (!isLoggedIn) {
+                return res.status(401).send("Please log in");
+            }
 
-  specific(req, res, next) {
-    const sessionData = req.session;
-    const isLoggedIn = req.session.isLoggedIn;
-    const username = req.session.username;
-    Results.findOne({ username: username })
-      .then((results) =>
-        res.render("calendardetails", {
-          result: mongooseToObject(results),
-        }),
-      )
-      .catch(next);
-  }
+            await Results.updateOne({ username }, req.body);
+            const results = await Results.findOne({ username });
+
+            res.render("calendar", { result: mongooseToObject(results) });
+        } catch (err) {
+            next(err);
+        }
+    }
+
+    // Show calendar details
+    async specific(req, res, next) {
+        try {
+            const { isLoggedIn, username } = req.session;
+
+            if (!isLoggedIn) {
+                return res.status(401).send("Please log in");
+            }
+
+            const results = await Results.findOne({ username });
+            res.render("calendardetails", { result: mongooseToObject(results) });
+        } catch (err) {
+            next(err);
+        }
+    }
 }
 
-module.exports = new ResultsController();
+module.exports = new CalendarController();
